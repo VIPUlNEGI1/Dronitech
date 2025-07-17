@@ -1,0 +1,281 @@
+<!-- Header -->
+<header class="dronitech-nav-header">
+    <div class="dronitech-nav-container">
+        <nav class="navbar navbar-expand-lg navbar-dark dronitech-nav">
+            <a class="navbar-brand dronitech-nav-logo" href="index-2.html">
+                <img src="Assets/DroniTech-V-logo.png" alt="Drono Tech Logo" height="40">
+            </a>
+            <button class="navbar-toggler dronitech-nav-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#dronitechNav" aria-controls="dronitechNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="dronitechNav">
+                <ul class="navbar-nav main-nav dronitech-nav-main">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index-2.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="services.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="AllServices.html">ALL SERVICES</a></li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="AllServices.html">ALL LOCATIONS</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="pages/Maharashtra.html">DRONE SERVICE AND SOLUTION IN MAHARASHTRA</a></li>
+                                    <li><a class="dropdown-item" href="locations.html">DRONE SERVICE AND SOLUTION IN GUJARAT</a></li>
+                                    <li><a class="dropdown-item" href="locations.html">DRONE SERVICE AND SOLUTION IN RAJASTHAN</a></li>
+                                    <li><a class="dropdown-item" href="locations.html">DRONE SERVICE AND SOLUTION IN MADHYA PRADESH</a></li>
+                                    <li><a class="dropdown-item" href="locations.html">DRONE SERVICE AND SOLUTION IN ODISHA</a></li>
+                                    <li><a class="dropdown-item" href="locations.html">DRONE SERVICE AND SOLUTION IN UTTAR PRADESH</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">SURVEYING</a>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-submenu">
+                                        <a class="dropdown-item dropdown-toggle" href="#">BATHYMETRIC</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">BATHYMETRIC SURVEYING</a></li>
+                                            <li><a class="dropdown-item" href="#">HYDROGRAPHIC MAPPING</a></li>
+                                            <li><a class="dropdown-item" href="#">UNDERWATER ANALYSIS</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">LAND SURVEY</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="Drone_Infrastructure_Services.html">DRONE INFRASTRUCTURE SERVICES</a></li>
+                            <li><a class="dropdown-item" href="Drone_Agriculture_Services.html">DRONE AGRICULTURE SERVICES</a></li>
+                            <li><a class="dropdown-item" href="Drone_Industrial_Inspections.html">DRONE INDUSTRIAL INSPECTIONS</a></li>
+                            <li><a class="dropdown-item" href="Aerial_Filming_Services.html">AERIAL FILMING SERVICES</a></li>
+                            <li><a class="dropdown-item" href="Drone_Mining_Services.html">DRONE MINING SERVICES</a></li>
+                            <li><a class="dropdown-item" href="Drone_Security_Services.html">DRONE SECURITY SERVICES</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Pages
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="services.html">Services</a></li>
+                            <li><a class="dropdown-item" href="blog.html">News</a></li>
+                            <li><a class="dropdown-item" href="privacy-policy.html">Privacy policy</a></li>
+                            <li><a class="dropdown-item" href="404.html">404</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacts.html">Contacts</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <style>
+        /* Scoped Navigation Styles */
+        .dronitech-nav-header {
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+        }
+
+        .dronitech-nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            padding: 10px 0 10px 15px; /* Removed right padding, kept left padding */
+        }
+
+        .dronitech-nav-logo {
+            margin-right: 30px; /* Spacing between logo and nav links */
+        }
+
+        .dronitech-nav-toggler {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            border: none;
+            padding: 8px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .dronitech-nav-toggler .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+
+        .dronitech-nav-main {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* Spacing between <li> elements */
+            justify-content: flex-end; /* Align nav items to the right */
+        }
+
+        .dronitech-nav .nav-link {
+            color: white !important;
+            padding: 10px 15px;
+            transition: background-color 0.2s ease;
+        }
+
+        .dronitech-nav .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .dronitech-nav .dropdown-menu {
+            display: none;
+            flex-direction: column;
+            background: rgba(0, 0, 0, 0.8);
+            border: none;
+            min-width: 200px;
+            border-radius: 4px;
+        }
+
+        .dronitech-nav .dropdown:hover .dropdown-menu {
+            display: flex;
+            animation: dronitech-nav-fadeIn 0.3s ease-in-out;
+        }
+
+        .dronitech-nav .dropdown-item {
+            color: white !important;
+            padding: 10px 20px;
+            transition: background-color 0.2s ease;
+        }
+
+        .dronitech-nav .dropdown-item:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .dronitech-nav .dropdown-submenu {
+            position: relative;
+        }
+
+        .dronitech-nav .dropdown-submenu .dropdown-menu {
+            top: 0;
+            left: 100%;
+            position: absolute;
+        }
+
+        .dronitech-nav .dropdown-submenu:hover .dropdown-menu {
+            display: flex;
+        }
+
+        @keyframes dronitech-nav-fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 991px) {
+            .dronitech-nav-main {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px; /* Reduced gap for mobile */
+                width: 100%;
+            }
+
+            .dronitech-nav .dropdown-menu {
+                position: static;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.8);
+                box-shadow: none;
+            }
+
+            .dronitech-nav .dropdown-submenu .dropdown-menu {
+                position: static;
+                margin-left: 20px;
+                width: calc(100% - 20px);
+            }
+
+            .dronitech-nav .navbar-collapse {
+                background: rgba(0, 0, 0, 0.8);
+                padding: 15px;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 100%;
+                max-width: 300px; /* Limit width for mobile menu */
+                padding-right: 0; /* Remove right padding in collapsed state */
+            }
+
+            .dronitech-nav-logo {
+                margin-right: 10px; /* Reduced spacing for mobile */
+            }
+
+            .dronitech-nav-toggler {
+                top: 10px;
+                right: 15px;
+            }
+        }
+
+        @media (max-width: 250px) {
+            .dronitech-nav-logo img {
+                height: 30px;
+            }
+
+            .dronitech-nav .nav-link, .dronitech-nav .dropdown-item {
+                font-size: 12px;
+                padding: 5px 10px;
+            }
+
+            .dronitech-nav-main {
+                gap: 5px; /* Minimal gap for very small screens */
+            }
+
+            .dronitech-nav .dropdown-menu {
+                width: 100%;
+                padding: 0;
+            }
+
+            .dronitech-nav .dropdown-submenu .dropdown-menu {
+                margin-left: 10px;
+                width: calc(100% - 10px);
+            }
+
+            .dronitech-nav .navbar-collapse {
+                padding: 5px;
+                padding-right: 0; /* Ensure no right padding */
+                max-width: 100%;
+            }
+
+            .dronitech-nav-toggler {
+                top: 5px;
+                right: 10px;
+            }
+        }
+    </style>
+</header>
+
+<!-- JavaScript for Navigation -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const dropdownSubmenus = document.querySelectorAll('.dronitech-nav .dropdown-submenu');
+        dropdownSubmenus.forEach(function (submenu) {
+            submenu.addEventListener('mouseenter', function () {
+                const dropdownMenu = this.querySelector('.dropdown-menu');
+                if (dropdownMenu) dropdownMenu.style.display = 'flex';
+            });
+            submenu.addEventListener('mouseleave', function () {
+                const dropdownMenu = this.querySelector('.dropdown-menu');
+                if (dropdownMenu) dropdownMenu.style.display = 'none';
+            });
+            submenu.querySelector('.dropdown-toggle').addEventListener('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const dropdownMenu = this.nextElementSibling;
+                if (dropdownMenu.style.display === 'flex') {
+                    dropdownMenu.style.display = 'none';
+                } else {
+                    dropdownMenu.style.display = 'flex';
+                }
+            });
+        });
+    });
+</script>

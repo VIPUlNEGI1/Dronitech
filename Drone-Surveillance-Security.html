@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DRONO TECH - Drone Security Services</title>
+    <!-- Meta Tags -->
+    <meta name="keywords" content="drone surveillance, crowd monitoring, remote area security, security consulting, aerial security">
+    <meta name="description" content="Dronitech offers advanced drone-based surveillance and security solutions, including crowd monitoring, remote area security, and security consulting for enhanced safety and control.">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="img/favicon.png">
+    <!-- External Styles -->
+    <link rel="stylesheet" href="css/critical.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Consolidated Inline Styles -->
+    <style>
+        /* Ensure dark theme globally */
+        main, section {
+            background: #121212 !important; /* Dark background */
+            color: #fffbfb !important; /* Light text for readability */
+        }
+
+        /* Preloader */
+        .preloader-cover {
+            height: 0;
+            width: 4000px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            background: #131213;
+            position: fixed;
+            z-index: 999;
+            overflow: hidden;
+            transition: height 0.8s cubic-bezier(0.65, 0.05, 0.36, 1) 0.3s;
+            will-change: height, transform;
+        }
+
+        .preloader-active .preloader-cover {
+            height: 4000px;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(0, 0, 0, 0.5); /* Darker semi-transparent background */
+            display: flex;
+            justify-content: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container.flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            padding: 0 15px;
+        }
+
+        .navbar-nav.main-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .navbar-nav.icon-nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .dropdown-menu {
+            display: none;
+            flex-direction: column;
+            background: rgba(0, 0, 0, 0.8);
+            border: none;
+            min-width: 200px;
+            border-radius: 4px;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: flex;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        .dropdown-item {
+            color: white !important;
+            padding: 10px 20px;
+            transition: background-color 0.2s ease;
+        }
+
+        .dropdown-item:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .nav-link {
+            color: white !important;
+            padding: 10px 20px;
+            transition: background-color 0.2s ease;
+        }
+
+        .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .dropdown-submenu {
+            position: relative;
+        }
+
+        .dropdown-submenu .dropdown-menu {
+            top: 0;
+            left: 100%;
+            position: absolute;
+        }
+
+        .dropdown-submenu:hover .dropdown-menu {
+            display: flex;
+        }
+
+        /* Gallery */
+        .security-gallery {
+            padding: 30px 0;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            width: 100%;
+            aspect-ratio: 4/3;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .gallery-item:hover::after {
+            opacity: 1;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Blog Section */
+        .s-blog {
+            padding: 40px 0;
+        }
+
+        .blog-post {
+            background: #1a1a1a;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .post-content h4 {
+            margin-bottom: 15px;
+        }
+
+        .post-content p {
+            line-height: 1.6;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 991px) {
+            .navbar-nav.main-nav, .navbar-nav.icon-nav {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .navbar-nav .dropdown-menu {
+                position: static;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.8);
+                box-shadow: none;
+            }
+
+            .dropdown-submenu .dropdown-menu {
+                position: static;
+                margin-left: 20px;
+            }
+
+            .navbar-collapse {
+                background: rgba(0, 0, 0, 0.8);
+                padding: 15px;
+                color: #fffbfb;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .navbar-toggler {
+                margin-left: auto;
+            }
+        }
+
+        @media (max-width: 250px) {
+            .navbar-brand img {
+                height: 30px;
+            }
+
+            .nav-link, .dropdown-item {
+                font-size: 12px;
+                padding: 5px 10px;
+            }
+
+            .navbar-nav.main-nav, .navbar-nav.icon-nav {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .dropdown-menu {
+                position: static;
+                width: 100%;
+                padding: 0;
+            }
+
+            .dropdown-submenu .dropdown-menu {
+                margin-left: 10px;
+            }
+
+            .navbar-collapse {
+                padding: 5px;
+            }
+        }
+
+        @media (hover: none) {
+            .gallery-item::after {
+                display: none; /* Disable overlay on touch devices */
+            }
+        }
+
+        /* Responsive YouTube Video */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            margin: 20px 0;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body id="home" class="home preloader-active">
+    <!-- Preloader -->
+    <div class="preloader-cover">
+        <div class="preloader">
+            <div class="ajax-loader">
+                <div class="ajax-loader-logo">
+                    <div class="ajax-loader-circle">
+                        <svg class="ajax-loader-circle-spinner" viewBox="0 0 500 500" xml:space="preserve">
+                            <circle cx="250" cy="250" r="239" />
+                        </svg>
+                    </div>
+                    <div class="ajax-loader-letters">Q</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+	<!-- Header -->
+ 
+<nav>
+    <!-- Header -->
+    <header class="dronitech-nav-header">
+        <div class="dronitech-nav-container">
+            <a class="dronitech-nav-logo" href="index-2.html">
+                <img src="Assets/DroniTech-V-logo.png" alt="Drono Tech Logo" height="40">
+            </a>
+            <button class="dronitech-nav-toggle" aria-label="Toggle Menu">
+                <span class="dronitech-nav-toggle-icon"></span>
+            </button>
+            <nav class="dronitech-nav-menu">
+                <ul class="dronitech-nav-list">
+                    <li class="dronitech-nav-item">
+                        <a class="dronitech-nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="dronitech-nav-item">
+                        <a class="dronitech-nav-link" href="about.html">About us</a>
+                    </li>
+                    <li class="dronitech-nav-item dronitech-nav-dropdown">
+						
+						
+						<!-- main dropdown -->
+                        <a class="dronitech-nav-link dronitech-nav-dropdown-toggle"  >Services <i class="fa fa-caret-down"></i>
+
+</a>
+                        <ul class="dronitech-nav-dropdown-menu">
+                            <li class="dronitech-nav-dropdown-item"><a href="services.html">All services</a></li>
+                            <li class="dronitech-nav-dropdown-submenu">
+                              
+								<!-- sub -->
+								<a class="dronitech-nav-dropdown-toggle">All locations  <i class="fa fa-caret-down"></i></a>
+                                <ul class="dronitech-nav-dropdown-menu">
+                                    <li class="dronitech-nav-dropdown-item"><a href="Maharastra1.html">DRONE SERVICE AND SOLUTION IN MAHARASHTRA</a></li>
+                                    <li class="dronitech-nav-dropdown-item"><a href="Gujarate2.html">DRONE SERVICE AND SOLUTION IN GUJARAT</a></li>
+                                    <li class="dronitech-nav-dropdown-item"><a href="Rajesthan3.html">DRONE SERVICE AND SOLUTION IN RAJASTHAN</a></li>
+                                    <li class="dronitech-nav-dropdown-item"><a href="Madhyapradesh4.html">DRONE SERVICE AND SOLUTION IN MADHYA PRADESH</a></li>
+                                    <li class="dronitech-nav-dropdown-item"><a href="Odisha4.html">DRONE SERVICE AND SOLUTION IN ODISHA</a></li>
+                                    <li class="dronitech-nav-dropdown-item"><a href="uttarparadesh.html">DRONE SERVICE AND SOLUTION IN UTTAR PRADESH</a></li>
+                                </ul>
+                            </li>
+							<br>
+
+                              <!-- sub -->
+                            <li class="dronitech-nav-dropdown-submenu">
+                                <a class="dronitech-nav-dropdown-toggle" href="#"> Surveying <i class="fa fa-caret-down"></i></a>
+                                <ul class="dronitech-nav-dropdown-menu">
+                                    <li class="dronitech-nav-dropdown-submenu">
+                                        <a class="dronitech-nav-dropdown-toggle" href="#">BATHYMETRIC  <i class="fa fa-caret-down"></i> </a>
+                                        <ul class="dronitech-nav-dropdown-menu">
+                                            <li class="dronitech-nav-dropdown-item"><a href="#">BATHYMETRIC SURVEYING</a></li>
+                                            <li class="dronitech-nav-dropdown-item"><a href="#">HYDROGRAPHIC MAPPING</a></li>
+                                            <li class="dronitech-nav-dropdown-item"><a href="#">UNDERWATER ANALYSIS</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dronitech-nav-dropdown-item"><a href="#">LAND SURVEY</a></li>
+                                </ul>
+                            </li>
+
+
+
+                            <li class="dronitech-nav-dropdown-item"><a href="Drone-Infrastructure-Services.html">Drone Infrastructure Services</a></li>
+                            <li class="dronitech-nav-dropdown-item"><a href="Drone-Agriculture-Inspections.html">Drone Agriculture Inspections</a></li>
+                            <li class="dronitech-nav-dropdown-item"><a href="Drone-Mining-Inspection.html">Drone Mining Inspection</a></li>
+                            <li class="dronitech-nav-dropdown-item"><a href="Drone-Mapping-Services.html">Drone Mapping Services</a></li>
+                            <li class="dronitech-nav-dropdown-item"><a href="Drone-Surveillance-Security.html">Drone Surveillance Security</a></li>
+                            <li class="dronitech-nav-dropdown-item"><a href="Drone-Media-Services.html">Drone Media Services</a></li>
+                        </ul>
+                    </li>
+                    <li class="dronitech-nav-item dronitech-nav-dropdown">
+                        <a class="dronitech-nav-link dronitech-nav-dropdown-toggle"  >Pages    <i class="fa fa-caret-down"></i> </a>
+                        <ul class="dronitech-nav-dropdown-menu">
+                            <li class="dronitech-nav-dropdown-item"><a href="services.html">Services</a></li>
+                            <li class="dronitech-nav-dropdown-item"><a href="pravicy-policy.html">Privacy policy</a></li>
+                            <!-- <li class="dronitech-nav-dropdown-item"><a href="blog.html">News</a></li> -->
+                            
+                        </ul>
+                    </li>
+                    <li class="dronitech-nav-item">
+                        <a class="dronitech-nav-link" href="contacts.html">Contacts</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <style>
+			.dronitech-nav-dropdown-toggle{
+				list-style: none;
+				margin-left: 1rem;
+			}
+            /* Scoped Navigation Styles */
+            .dronitech-nav-header {
+                background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
+                position: fixed;
+                width: 100%;
+                top: 0;
+                z-index: 1000;
+                display: flex;
+                justify-content: center;
+            }
+
+            .dronitech-nav-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                max-width: 1200px;
+                padding: 10px 0 10px 15px; /* No right padding, left padding preserved */
+            }
+
+            .dronitech-nav-logo {
+                margin-right: 30px; /* Spacing between logo and nav links */
+            }
+
+            .dronitech-nav-logo img {
+                height: 40px;
+                vertical-align: middle;
+            }
+
+            .dronitech-nav-toggle {
+                position: absolute;
+                top: 2rem;
+                right: 15px;
+                background: none;
+                border: none;
+                cursor: pointer;
+                padding: 8px;
+                z-index: 1001;
+                display: none; /* Hidden by default, shown conditionally */
+            }
+
+            .dronitech-nav-toggle-icon {
+                display: block;
+                width: 25px;
+                height: 3px;
+                background: rgba(255, 255, 255, 0.8);
+                position: relative;
+            }
+
+            .dronitech-nav-toggle-icon::before,
+            .dronitech-nav-toggle-icon::after {
+                content: '';
+                position: absolute;
+                width: 25px;
+                height: 3px;
+                background: rgba(255, 255, 255, 0.8);
+                transition: transform 0.3s ease;
+            }
+
+            .dronitech-nav-toggle-icon::before {
+                top: -8px;
+            }
+
+            .dronitech-nav-toggle-icon::after {
+                top: 8px;
+            }
+
+            .dronitech-nav-toggle.active .dronitech-nav-toggle-icon {
+                background: transparent;
+            }
+
+            .dronitech-nav-toggle.active .dronitech-nav-toggle-icon::before {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            .dronitech-nav-toggle.active .dronitech-nav-toggle-icon::after {
+                transform: rotate(-45deg) translate(7px, -7px);
+            }
+
+            .dronitech-nav-menu {
+                width: 100%;
+            }
+
+            .dronitech-nav-list {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px; /* Spacing between <li> elements */
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                justify-content: flex-end;
+            }
+
+            .dronitech-nav-item {
+                position: relative;
+            }
+
+            .dronitech-nav-link {
+                color: white;
+                text-decoration: none;
+                padding: 10px 15px;
+                display: block;
+                transition: background-color 0.2s ease;
+            }
+
+            .dronitech-nav-link:hover {
+                background-color: rgba(255, 255, 255, 0.3);
+            }
+
+            .dronitech-nav-dropdown-menu {
+                display: none;
+                position: absolute;
+                background: rgba(0, 0, 0, 0.8);
+                min-width: 200px;
+                border-radius: 4px;
+                list-style: none;
+                margin: 0;
+                padding: 5px 0;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            }
+
+            .dronitech-nav-dropdown .dronitech-nav-dropdown-menu.active {
+                display: block;
+            }
+
+            .dronitech-nav-dropdown-item a {
+                color: white;
+                text-decoration: none;
+                padding: 10px 20px;
+                display: block;
+                transition: background-color 0.2s ease;
+            }
+
+            .dronitech-nav-dropdown-item a:hover {
+                background-color: rgba(255, 255, 255, 0.3);
+            }
+
+            .dronitech-nav-dropdown-submenu {
+                position: relative;
+            }
+
+            .dronitech-nav-dropdown-submenu .dronitech-nav-dropdown-menu {
+                top: 0;
+                left: 100%;
+                position: absolute;
+            }
+
+            @keyframes dronitech-nav-fadeIn {
+                from { opacity: 0; transform: translateY(-10px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+
+            /* Mobile Menu */
+            @media (max-width: 991px) {
+                .dronitech-nav-list {
+                    display: none;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 10px;
+                    width: 100%;
+                    position: absolute;
+                    top: 60px;
+                    right: 0;
+                    background: rgba(0, 0, 0, 0.8);
+                    padding: 15px;
+                    box-sizing: border-box;
+                }
+
+                .dronitech-nav-list.active {
+                    display: flex;
+                }
+
+                .dronitech-nav-dropdown-menu {
+                    position: static;
+                    width: 100%;
+                    box-shadow: none;
+                }
+
+                .dronitech-nav-dropdown-submenu .dronitech-nav-dropdown-menu {
+                    position: static;
+                    margin-left: 20px;
+                    width: calc(100% - 20px);
+                }
+
+                .dronitech-nav-logo {
+                    margin-right: 10px; /* Reduced spacing for mobile */
+                }
+
+                .dronitech-nav-toggle {
+                    display: block; /* Show toggle on mobile */
+                }
+            }
+
+            @media (max-width: 250px) {
+                .dronitech-nav-logo img {
+                    height: 30px;
+                }
+
+                .dronitech-nav-link,
+                .dronitech-nav-dropdown-item a {
+                    font-size: 12px;
+                    padding: 5px 10px;
+                }
+
+                .dronitech-nav-list {
+                    gap: 5px;
+                    padding: 5px;
+                }
+
+                .dronitech-nav-dropdown-submenu .dronitech-nav-dropdown-menu {
+                    margin-left: 10px;
+                    width: calc(100% - 10px);
+                }
+
+                .dronitech-nav-toggle {
+                    top: 5px;
+                    right: 10px;
+                }
+            }
+
+            /* Toggle Button Visibility: 700px - 100px */
+            @media (min-width: 100px) and (max-width: 700px) {
+                .dronitech-nav-toggle {
+                    display: block; /* Show toggle only between 100px and 700px */
+                }
+
+                .dronitech-nav-list {
+                    display: none; /* Hide menu by default in this range */
+                }
+            }
+
+            @media (max-width: 99px) {
+                .dronitech-nav-toggle {
+                    display: none; /* Hide toggle below 100px */
+                }
+            }
+
+            @media (min-width: 701px) {
+                .dronitech-nav-toggle {
+                    display: none; /* Hide toggle above 700px */
+                }
+
+                .dronitech-nav-list {
+                    display: flex; /* Show menu on desktop */
+                }
+            }
+        </style>
+    </header>
+
+    <!-- JavaScript for Toggle Menu and Dropdowns -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggleButton = document.querySelector('.dronitech-nav-toggle');
+            const navList = document.querySelector('.dronitech-nav-list');
+            const dropdownToggles = document.querySelectorAll('.dronitech-nav-dropdown-toggle');
+
+            // Toggle Menu
+            if (toggleButton) {
+                toggleButton.addEventListener('click', function () {
+                    toggleButton.classList.toggle('active');
+                    navList.classList.toggle('active');
+                });
+            }
+
+            // Dropdown Toggle on Click Only
+            dropdownToggles.forEach(function (toggle) {
+                toggle.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const dropdownMenu = this.nextElementSibling;
+                    dropdownMenu.classList.toggle('active'); // Toggle active class
+                });
+
+                // Remove hover behavior
+                toggle.removeEventListener('mouseenter', function () {});
+                toggle.removeEventListener('mouseleave', function () {});
+            });
+
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', function (e) {
+                dropdownToggles.forEach(function (toggle) {
+                    const dropdownMenu = toggle.nextElementSibling;
+                    if (!toggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
+                        dropdownMenu.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
+</nav>
+ 
+    <!-- Main Content -->
+    <main style="padding-top: 100px;">
+        <!-- Page Title -->
+        <div class="page-title" style="background-image: url(img/bg-page.jpg); padding: 50px 0;">
+            <div class="container">
+                <h1 class="title">Drone Security Services</h1>
+                <div class="breadcrumbs">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li>Drone Security Services</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog Section -->
+        <section class="s-blog">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 mx-auto">
+                        <!-- Intro Section -->
+                        <article class="blog-post">
+                            <div class="post-content">
+                                <h4>Drone Surveillance and Security Solutions</h4>
+                                <p style="color: #fffbfb;" class="mb-4">
+                                    Whether monitoring large events or securing remote areas, Dronitech’s drone-based surveillance and security services provide unmatched visibility and control. Our unmanned aircraft systems offer a faster, safer, and more cost-effective alternative to traditional security methods, ensuring public safety and civil security.
+                                </p>
+                            </div>
+                        </article>
+
+                        <!-- Crowd Monitoring -->
+                        <article class="blog-post">
+                            <div class="post-content">
+                                <h4>Crowd Monitoring</h4>
+                                <p style="color: #fffbfb;" class="mb-4">
+                                    Our drones provide real-time aerial views of large gatherings, enabling event organizers and security teams to monitor crowd dynamics effectively. With high-resolution cameras, we deliver live video feeds to help manage public safety and respond swiftly to potential incidents.
+                                </p>
+                            </div>
+                        </article>
+
+                        <!-- Remote Area Security -->
+                        <article class="blog-post">
+                            <div class="post-content">
+                                <h4>Remote Area Security</h4>
+                                <p style="color: #fffbfb;" class="mb-4">
+                                    Dronitech’s drones are equipped to secure remote and challenging terrains where traditional surveillance methods fall short. Our systems provide real-time data and video output, ensuring comprehensive monitoring of isolated locations to detect and address security threats promptly.
+                                </p>
+                            </div>
+                        </article>
+
+                        <!-- Security Consulting -->
+                        <article class="blog-post">
+                            <div class="post-content">
+                                <h4>Security Consulting</h4>
+                                <p style="color: #fffbfb;" class="mb-4">
+                                    We offer tailored security consulting services to design customized aerial security solutions. Our expertise helps clients develop effective strategies for surveillance, emergency response, and threat detection, leveraging drone technology for optimal outcomes.
+                                </p>
+                            </div>
+                        </article>
+
+                        <!-- Benefits Section -->
+                        <article class="blog-post">
+                            <div class="post-content">
+                                <h4>Why Choose Dronitech for Security?</h4>
+                                <ul style="color: #fffbfb;" class="mb-4">
+                                    <li><strong>Customized Solutions:</strong> Tailored aerial security systems to meet specific client needs.</li>
+                                    <li><strong>Real-Time Insights:</strong> Live video and data for immediate situational awareness and action planning.</li>
+                                    <li><strong>Object Classification:</strong> Advanced technology to identify and classify objects for enhanced threat detection.</li>
+                                    <li><strong>Data Archiving:</strong> Collect and store aerial data for ongoing analysis and future reference.</li>
+                                    <li><strong>Cost-Effective:</strong> More affordable than traditional methods like helicopter surveillance.</li>
+                                </ul>
+                                <p style="color: #fffbfb;" class="mb-4">
+                                    Dronitech leverages cutting-edge drone technology to provide reliable, efficient, and innovative solutions for surveillance and security needs across various industries.
+                                </p>
+                                <a href="contacts.html" class="btn btn-primary">Contact us <i class="fa fa-arrow-right ml-1"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- Responsive YouTube Video -->
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/DrdVZfLFDgw" title="Drone Survey for Indian Railway Over-Bridge Construction Project | Dronitech" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Security Gallery Section -->
+        <section class="security-gallery">
+            <h2>Gallery Section</h2>
+            <div class="container">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                    <div class="col">
+                        <div class="gallery-item">
+                            <img src="img/prod-shop-1.jpg" alt="Security Site 1">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/400/300?random=4" alt="Security Site 2">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="gallery-item">
+                            <img src="img/prod-shop-5.jpg" alt="Security Site 3">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="gallery-item">
+                            <img src="https://picsum.photos/400/300?random=6" alt="Security Site 4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <style>
+            li {
+                color: #fffbfb;
+            }
+            p {
+                color: #fbf6f6;
+            }
+            h5 {
+                color: #ffffff;
+            }
+        </style>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-lg-3 footer-info">
+                    <h5>About Us</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                </div>
+                <div class="col-6 col-sm-4 col-lg-2 blok-link">
+                    <h5>Shop</h5>
+                    <ul>
+                        <li><a href="#">DJI</a></li>
+                        <li><a href="#">Parrot</a></li>
+                        <li><a href="#">Hubsan</a></li>
+                        <li><a href="#">Mi</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-sm-4 col-lg-2 blok-link">
+                    <h5>Discount</h5>
+                    <ul>
+                        <li><a href="#">lorem ipsum</a></li>
+                        <li><a href="#">dolor sit amet</a></li>
+                        <li><a href="#">tempor incididunt</a></li>
+                        <li><a href="#">enim ad minim</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-4 col-lg-2 blok-link">
+                    <h5>Support</h5>
+                    <ul>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 footer-subscribe">
+                    <h5>Subscribe</h5>
+                    <form action="https://html.rovadex.com/" class="subscribe-form">
+                        <input type="email" name="subscribe" placeholder="E-mail">
+                        <input type="submit" value="send">
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-12 col-md-3">
+                        <a href="index-2.html" class="logo footer-logo"><img src="img/logo.svg" alt="logo"></a>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <ul class="footer-menu">
+                            <li><a href="index-2.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="shop.html">Shop</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="contacts.html">Contacts</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <ul class="soc-link">
+                            <li><a target="_blank" href="https://www.facebook.com/rovadex"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a target="_blank" href="https://www.instagram.com/rovadex"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            <li><a target="_blank" href="https://www.youtube.com/"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                            <li><a target="_blank" href="https://vimeo.com/"><i class="fa fa-vimeo-square" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p><a class="rovadex" href="https://rovadex.com/" target="_blank">Rovadex</a> © 2019. <a href="privacy-policy.html" target="_blank">All Rights Reserved.</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- To Top Button -->
+    <a class="to-top" href="#home">
+        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+        <span>
+            <img src="img/icon-tab-1.svg" alt="">
+        </span>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/rx-lazy.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Preloader hide after page load
+        document.addEventListener('DOMContentLoaded', function () {
+            setTimeout(() => {
+                document.body.classList.remove('preloader-active');
+                document.querySelector('.preloader-cover').style.display = 'none';
+            }, 1000); // Matches preloader animation duration
+        });
+
+        // Dropdown submenu functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const dropdownSubmenus = document.querySelectorAll('.dropdown-submenu');
+            dropdownSubmenus.forEach(function (submenu) {
+                submenu.addEventListener('mouseenter', function () {
+                    const dropdownMenu = this.querySelector('.dropdown-menu');
+                    if (dropdownMenu) dropdownMenu.style.display = 'flex';
+                });
+                submenu.addEventListener('mouseleave', function () {
+                    const dropdownMenu = this.querySelector('.dropdown-menu');
+                    if (dropdownMenu) dropdownMenu.style.display = 'none';
+                });
+                submenu.querySelector('.dropdown-toggle').addEventListener('click', function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const dropdownMenu = this.nextElementSibling;
+                    if (dropdownMenu.style.display === 'flex') {
+                        dropdownMenu.style.display = 'none';
+                    } else {
+                        dropdownMenu.style.display = 'flex';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+	<meta charset="UTF-8">
+	<title>DRONO TECH</title>
+	<!-- =============== META =============== -->
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="shortcut icon" href="img/favicon.png">
+	<!-- =============== STYLE =============== -->
+	<link rel="stylesheet" href="css/critical.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://unpkg.com/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+	<style>
+		.preloader-active .preloader-cover{
+			height: 4000px;
+			transform: translate(-50%,-50%) rotate(45deg);
+		}
+		.preloader-cover{
+			height: 0;
+			width: 4000px;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%) rotate(45deg);
+			background: #131213;
+			position: fixed;
+			z-index: 999;
+			overflow: hidden;
+			transition: .8s cubic-bezier(0.65, 0.05, 0.36, 1) .3s;
+			overflow: hidden;
+			will-change: top, left;
+		}
+	</style>
+</head>
+
+<body id="home" class="home preloader-active" style="background-image: url(img/bg-body.svg);">
+	<!--=============== PRELOADER ===============-->
+	<div class="preloader-cover">
+		<div class="preloader">
+			<div class="ajax-loader">
+				<div class="ajax-loader-logo">
+					<div class="ajax-loader-circle">
+						<svg class="ajax-loader-circle-spinner" viewBox="0 0 500 500" xml:space="preserve">
+							<circle cx="250" cy="250" r="239" />
+						</svg>
+					</div>
+					<div class="ajax-loader-letters">Q</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--============= PRELOADER END =============-->
+
+	<!--=============== HEADER ===============-->
+<nav>
+    <!-- Header -->
+    <header class="dronitech-nav-header">
+        <div class="dronitech-nav-container">
+            <a class="dronitech-nav-logo" href="index-2.html">
+                <img src="Assets/DroniTech-V-logo.png" alt="Drono Tech Logo" height="40">
+            </a>
+            <button class="dronitech-nav-toggle" aria-label="Toggle Menu">
+                <span class="dronitech-nav-toggle-icon"></span>
+            </button>
+            <nav class="dronitech-nav-menu">
+                <ul class="dronitech-nav-list">
+                    <li class="dronitech-nav-item">
+                        <a class="dronitech-nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="dronitech-nav-item">
+                        <a class="dronitech-nav-link" href="about.html">About us</a>
+                    </li>
+                    <li class="dronitech-nav-item dronitech-nav-dropdown">
+						
+						
+						<!-- main dropdown -->
+                        <a class="dronitech-nav-link dronitech-nav-dropdown-toggle"  >Services <i class="fa fa-caret-down"></i>
+
+</a>
+                        <ul class="dronitech-nav-dropdown-menu">
+                            <li class="dronitech-nav-dropdown-item"><a href="services.html">All services</a></li>
+                            <li class="dronitech-nav-dropdown-submenu">
+                              
+								<!-- sub -->
+								<a class="dronitech-nav-dropdown-toggle">All locations  <i class="fa fa-caret-down"></i></a>
+                                <ul class="dronitech-nav-dropdown-menu">
+                                    <li class="dronitech-nav-dropdown-item"><a href="Maharastra1.html">DRONE SERVICE AND SOLUTION IN MAHARASHTRA</a></li>
+                                    <li class="dronitech-nav-dropdown-item"><a href="Gujarate2.html">DRONE SERVICE AND SOLUTION IN GUJARAT</a></li>
+                                    <li class="dronitech-nav-dropdown-item"><a href="Rajesthan3.html">DRONE SERVICE AND SOLUTION IN RAJASTHAN</a></li>
+                                    <li class="dronitech-nav-dropdown-item"><a href="Madhyapradesh4.html">DRONE SERVICE AND SOLUTION IN MADHYA PRADESH</a></li>
+                                    <li class="dronitech-nav-dropdown-item"><a href="Odisha4.html">DRONE SERVICE AND SOLUTION IN ODISHA</a></li>
+                                    <li class="dronitech-nav-dropdown-item"><a href="uttarparadesh.html">DRONE SERVICE AND SOLUTION IN UTTAR PRADESH</a></li>
+                                </ul>
+                            </li>
+							<br>
+
+                              <!-- sub -->
+                            <li class="dronitech-nav-dropdown-submenu">
+                                <a class="dronitech-nav-dropdown-toggle" href="#"> Surveying <i class="fa fa-caret-down"></i></a>
+                                <ul class="dronitech-nav-dropdown-menu">
+                                    <li class="dronitech-nav-dropdown-submenu">
+                                        <a class="dronitech-nav-dropdown-toggle" href="#">BATHYMETRIC  <i class="fa fa-caret-down"></i> </a>
+                                        <ul class="dronitech-nav-dropdown-menu">
+                                            <li class="dronitech-nav-dropdown-item"><a href="#">BATHYMETRIC SURVEYING</a></li>
+                                            <li class="dronitech-nav-dropdown-item"><a href="#">HYDROGRAPHIC MAPPING</a></li>
+                                            <li class="dronitech-nav-dropdown-item"><a href="#">UNDERWATER ANALYSIS</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dronitech-nav-dropdown-item"><a href="#">LAND SURVEY</a></li>
+                                </ul>
+                            </li>
+
+
+
+                            <li class="dronitech-nav-dropdown-item"><a href="Drone-Infrastructure-Services.html">Drone Infrastructure Services</a></li>
+                            <li class="dronitech-nav-dropdown-item"><a href="Drone-Agriculture-Inspections.html">Drone Agriculture Inspections</a></li>
+                            <li class="dronitech-nav-dropdown-item"><a href="Drone-Mining-Inspection.html">Drone Mining Inspection</a></li>
+                            <li class="dronitech-nav-dropdown-item"><a href="Drone-Mapping-Services.html">Drone Mapping Services</a></li>
+                            <li class="dronitech-nav-dropdown-item"><a href="Drone-Surveillance-Security.html">Drone Surveillance Security</a></li>
+                            <li class="dronitech-nav-dropdown-item"><a href="Drone-Media-Services.html">Drone Media Services</a></li>
+                        </ul>
+                    </li>
+                    <li class="dronitech-nav-item dronitech-nav-dropdown">
+                        <a class="dronitech-nav-link dronitech-nav-dropdown-toggle"  >Pages    <i class="fa fa-caret-down"></i> </a>
+                        <ul class="dronitech-nav-dropdown-menu">
+                            <li class="dronitech-nav-dropdown-item"><a href="services.html">Services</a></li>
+                            <li class="dronitech-nav-dropdown-item"><a href="pravicy-policy.html">Privacy policy</a></li>
+                            <!-- <li class="dronitech-nav-dropdown-item"><a href="blog.html">News</a></li> -->
+                            
+                        </ul>
+                    </li>
+                    <li class="dronitech-nav-item">
+                        <a class="dronitech-nav-link" href="contacts.html">Contacts</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <style>
+			.dronitech-nav-dropdown-toggle{
+				list-style: none;
+				margin-left: 1rem;
+			}
+            /* Scoped Navigation Styles */
+            .dronitech-nav-header {
+                background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
+                position: fixed;
+                width: 100%;
+                top: 0;
+                z-index: 1000;
+                display: flex;
+                justify-content: center;
+            }
+
+            .dronitech-nav-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                max-width: 1200px;
+                padding: 10px 0 10px 15px; /* No right padding, left padding preserved */
+            }
+
+            .dronitech-nav-logo {
+                margin-right: 30px; /* Spacing between logo and nav links */
+            }
+
+            .dronitech-nav-logo img {
+                height: 40px;
+                vertical-align: middle;
+            }
+
+            .dronitech-nav-toggle {
+                position: absolute;
+                top: 2rem;
+                right: 15px;
+                background: none;
+                border: none;
+                cursor: pointer;
+                padding: 8px;
+                z-index: 1001;
+                display: none; /* Hidden by default, shown conditionally */
+            }
+
+            .dronitech-nav-toggle-icon {
+                display: block;
+                width: 25px;
+                height: 3px;
+                background: rgba(255, 255, 255, 0.8);
+                position: relative;
+            }
+
+            .dronitech-nav-toggle-icon::before,
+            .dronitech-nav-toggle-icon::after {
+                content: '';
+                position: absolute;
+                width: 25px;
+                height: 3px;
+                background: rgba(255, 255, 255, 0.8);
+                transition: transform 0.3s ease;
+            }
+
+            .dronitech-nav-toggle-icon::before {
+                top: -8px;
+            }
+
+            .dronitech-nav-toggle-icon::after {
+                top: 8px;
+            }
+
+            .dronitech-nav-toggle.active .dronitech-nav-toggle-icon {
+                background: transparent;
+            }
+
+            .dronitech-nav-toggle.active .dronitech-nav-toggle-icon::before {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            .dronitech-nav-toggle.active .dronitech-nav-toggle-icon::after {
+                transform: rotate(-45deg) translate(7px, -7px);
+            }
+
+            .dronitech-nav-menu {
+                width: 100%;
+            }
+
+            .dronitech-nav-list {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px; /* Spacing between <li> elements */
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                justify-content: flex-end;
+            }
+
+            .dronitech-nav-item {
+                position: relative;
+            }
+
+            .dronitech-nav-link {
+                color: white;
+                text-decoration: none;
+                padding: 10px 15px;
+                display: block;
+                transition: background-color 0.2s ease;
+            }
+
+            .dronitech-nav-link:hover {
+                background-color: rgba(255, 255, 255, 0.3);
+            }
+
+            .dronitech-nav-dropdown-menu {
+                display: none;
+                position: absolute;
+                background: rgba(0, 0, 0, 0.8);
+                min-width: 200px;
+                border-radius: 4px;
+                list-style: none;
+                margin: 0;
+                padding: 5px 0;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            }
+
+            .dronitech-nav-dropdown .dronitech-nav-dropdown-menu.active {
+                display: block;
+            }
+
+            .dronitech-nav-dropdown-item a {
+                color: white;
+                text-decoration: none;
+                padding: 10px 20px;
+                display: block;
+                transition: background-color 0.2s ease;
+            }
+
+            .dronitech-nav-dropdown-item a:hover {
+                background-color: rgba(255, 255, 255, 0.3);
+            }
+
+            .dronitech-nav-dropdown-submenu {
+                position: relative;
+            }
+
+            .dronitech-nav-dropdown-submenu .dronitech-nav-dropdown-menu {
+                top: 0;
+                left: 100%;
+                position: absolute;
+            }
+
+            @keyframes dronitech-nav-fadeIn {
+                from { opacity: 0; transform: translateY(-10px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+
+            /* Mobile Menu */
+            @media (max-width: 991px) {
+                .dronitech-nav-list {
+                    display: none;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 10px;
+                    width: 100%;
+                    position: absolute;
+                    top: 60px;
+                    right: 0;
+                    background: rgba(0, 0, 0, 0.8);
+                    padding: 15px;
+                    box-sizing: border-box;
+                }
+
+                .dronitech-nav-list.active {
+                    display: flex;
+                }
+
+                .dronitech-nav-dropdown-menu {
+                    position: static;
+                    width: 100%;
+                    box-shadow: none;
+                }
+
+                .dronitech-nav-dropdown-submenu .dronitech-nav-dropdown-menu {
+                    position: static;
+                    margin-left: 20px;
+                    width: calc(100% - 20px);
+                }
+
+                .dronitech-nav-logo {
+                    margin-right: 10px; /* Reduced spacing for mobile */
+                }
+
+                .dronitech-nav-toggle {
+                    display: block; /* Show toggle on mobile */
+                }
+            }
+
+            @media (max-width: 250px) {
+                .dronitech-nav-logo img {
+                    height: 30px;
+                }
+
+                .dronitech-nav-link,
+                .dronitech-nav-dropdown-item a {
+                    font-size: 12px;
+                    padding: 5px 10px;
+                }
+
+                .dronitech-nav-list {
+                    gap: 5px;
+                    padding: 5px;
+                }
+
+                .dronitech-nav-dropdown-submenu .dronitech-nav-dropdown-menu {
+                    margin-left: 10px;
+                    width: calc(100% - 10px);
+                }
+
+                .dronitech-nav-toggle {
+                    top: 5px;
+                    right: 10px;
+                }
+            }
+
+            /* Toggle Button Visibility: 700px - 100px */
+            @media (min-width: 100px) and (max-width: 700px) {
+                .dronitech-nav-toggle {
+                    display: block; /* Show toggle only between 100px and 700px */
+                }
+
+                .dronitech-nav-list {
+                    display: none; /* Hide menu by default in this range */
+                }
+            }
+
+            @media (max-width: 99px) {
+                .dronitech-nav-toggle {
+                    display: none; /* Hide toggle below 100px */
+                }
+            }
+
+            @media (min-width: 701px) {
+                .dronitech-nav-toggle {
+                    display: none; /* Hide toggle above 700px */
+                }
+
+                .dronitech-nav-list {
+                    display: flex; /* Show menu on desktop */
+                }
+            }
+        </style>
+    </header>
+
+    <!-- JavaScript for Toggle Menu and Dropdowns -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggleButton = document.querySelector('.dronitech-nav-toggle');
+            const navList = document.querySelector('.dronitech-nav-list');
+            const dropdownToggles = document.querySelectorAll('.dronitech-nav-dropdown-toggle');
+
+            // Toggle Menu
+            if (toggleButton) {
+                toggleButton.addEventListener('click', function () {
+                    toggleButton.classList.toggle('active');
+                    navList.classList.toggle('active');
+                });
+            }
+
+            // Dropdown Toggle on Click Only
+            dropdownToggles.forEach(function (toggle) {
+                toggle.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const dropdownMenu = this.nextElementSibling;
+                    dropdownMenu.classList.toggle('active'); // Toggle active class
+                });
+
+                // Remove hover behavior
+                toggle.removeEventListener('mouseenter', function () {});
+                toggle.removeEventListener('mouseleave', function () {});
+            });
+
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', function (e) {
+                dropdownToggles.forEach(function (toggle) {
+                    const dropdownMenu = toggle.nextElementSibling;
+                    if (!toggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
+                        dropdownMenu.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
+</nav>
+	<!--============= HEADER END =============-->
+
+	<!--=============== MAIN CONTENT ===============-->
+	<main>
+		<!--=============== MAIN SLIDER ===============-->
+	
+		<!--=============== MAIN SLIDER END ===============-->
+
+		<!--================= BEST PRICES =================-->
+		 
+	
+	
+
+
+         	
+
+
+		<!--=============== BEST PRICES AND ===============-->
+
+		<!--================ GALLERY BLOCK ================-->
+		<section class="serv-block">
+			<a href="services.html" class="serv-block-item">
+				<span class="border-item"></span>
+				<img class="rx-lazy" src="img/placeholder-all.png" data-src="img/img-1.jpg" alt="img">
+				<div class="serv-block-info">
+					<h4>DroniTech – Drone Service and Solution in Gujarat</h4>
+					<p>Have you ever seen a small flying robot with a camera? That’s a drone! At DroniTech, we use drones to help people build safely, watch large places, check machines, and create amazing land maps. We work all across Gujarat — in Gandhinagar, Ahmedabad, Dahej,  Surat, Bharuch, Baroda, Rajkot, and more.
+
+Drones are super smart. They can fly high and give us clear views from the sky. With our expert team, we help with everything from watching construction sites to doing accurate land surveys. DroniTech gives the best drone service and solution in Dahej, Bharuch, Gujarat using the latest tools and trained pilots.</p>
+					<!-- <span>read more</span> -->
+					
+				</div>
+			</a>
+			<a href="services.html" class="serv-block-item">
+				<span class="border-item"></span>
+				<img class="rx-lazy" src="img/placeholder-all.png" data-src="img/img-2.jpg" alt="img">
+				<div class="serv-block-info">
+					<h4>DGPS Surveying</h4>
+					<p>Engineering Survey DGPS Survey Contour Survey DGPS Survey Services A precise land survey is the first step of any construction project and the accuracy of this survey will define the precision of the construction going forward. Also, there are various methods that surveyors have used for many years e.g. Total Station. So, the survey equipment[...]</p>
+					<span>read more</span>
+				</div>
+			</a>
+			<a href="services.html" class="serv-block-item">
+				<span class="border-item"></span>
+				<img class="rx-lazy" src="img/placeholder-all.png" data-src="img/img-3.jpg" alt="img">
+				<div class="serv-block-info">
+					<h4>What We Do with Drones</h4>
+					<p>
+						<strong>
+
+							Helping Builders See from the Sky
+						</strong>
+						<p>
+
+							When people build roads, bridges, homes, or offices, they need to see what’s happening from above. Our drones fly over the site and take pictures and videos. This helps worker s check progress and stay safe. Many builders trust our drone construction site monitoring in Dahej, Bharuch and other cities.
+						</p>
+  <strong>
+
+	  Keeping Areas Safe
+  </strong>
+  <p>
+
+	  Some places need extra eyes — like big events, factories, and farms.  Our drones fly around and keep watch from the sky. If anything strange happens, it’s easy to see and act fast. People in Gujarat count on us for drone surveillance and security.
+  </p>
+
+  <strong>
+
+	  Checking Big Machines Without Risk
+  </strong>
+  <p>
+
+	  In big factories or power plants, it’s hard to check machines by climbing. But our drones can fly close to the top of towers, tanks, and pipes. We take clear pictures without putting anyone in danger. That’s how we do drone industrial inspections quickly and safely.
+  </p>
+
+  <strong>
+
+	  Making Maps with Special Drones
+  </strong>
+  <p>
+
+	  Do you want to know exactly where your land starts or ends? Our drones help with that too! We use smart systems for DGPS surveying. It tells us the correct place and size of land. Whether it’s a farm, forest, or city land — we use aerial drone surveying to make super-accurate maps.
+  </p>
+
+  <strong>
+	 
+	  Fast Land Surveys from the Sky
+  </strong>
+  <p>
+	  Instead of walking around the land, our aerial land survey drone flies and takes pictures from above. This helps make 2D and 3D maps. People in Ahmedabad love our fast drone mapping services that save both time and money. DroniTech is trusted as a top drone survey company in Dahej, Bharuch, Gujarat.
+
+  </p>
+
+  <strong>
+
+	  Special Work for Special Needs
+  </strong>
+   <p>
+
+	   Some people need drones for farms, some for filming, and others for rescue jobs. That’s why we offer custom drone service in Gandhinagar and other cities. We plan the drone job based on your need – just tell us what you want, and we’ll take care of the rest!</p>
+   </p>
+					<!-- <span>read more</span> -->
+				</div>
+			</a>
+			<a href="services.html" class="serv-block-item">
+				<span class="border-item"></span>
+				<img class="rx-lazy" src="img/placeholder-all.png" data-src="img/img-4.jpg" alt="img">
+				<div class="serv-block-info">
+					<h4>Why People in Gujarat Trust DroniTech</h4>
+					<p>Whether it’s a dgps land survey, a drone land surveying job, or a full inspection of a construction site — we are ready with our team and tech. We also help with drone surveying for railways, roads, and water bodies. Many people now use drones and surveying instead of old, slow methods.</p>
+					<!-- <span>read more</span> -->
+				</div>
+			</a>
+		</section>
+	
+
+ 
+
+ <!--============== PAGE-TITLE ==============-->
+<!--============== PAGE-TITLE ==============-->
+<!-- <div class="page-title" style="background-image: url(img/bg-page.jpg);">
+    <div class="container">
+        <h1 class="title">Our Blog</h1>
+        <div class="breadcrumbs">
+            <ul>
+                <li><a href="index-2.html">Home</a></li>
+                <li>Blog</li>
+            </ul>
+        </div>
+    </div>
+</div> -->
+
+<!--============ S-BLOG ============-->
+
+<section class="s-blog">
+    <div class="container">
+        <div class="row">
+            <!-- Main Content Area -->
+            <div class="col-lg-8 mx-auto">
+                <!-- Blog Post - Modern Card Style -->
+                <article class="blog-post card mb-5 border-0 shadow-sm">
+                    <div class="row no-gutters">
+                        <div class="col-md-5">
+                            <div class="post-thumbnail position-relative">
+                                <img src="img/img-contact-1.jpg" alt="Blog Post Image" class="img-fluid h-100 object-cover">
+                                <!-- <div class="post-date position-absolute bg-primary text-white text-center p-2">
+                                    <span class="day d-block font-weight-bold">15</span>
+                                    <span class="month text-uppercase">Jun</span>
+                                </div> -->
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="post-content p-4">
+                                <!-- <div class="post-meta mb-2">
+                                    <span class="text-muted small"><i class="fa fa-user mr-1"></i> By Admin</span>
+                                    <span class="text-muted small mx-2">|</span>
+                                    <span class="text-muted small"><i class="fa fa-comments mr-1"></i> 5 Comments</span>
+                                </div> -->
+                                <!-- <h2 class="post-title h4 mb-3"><a href="single-post.html" class="text-dark">The Future of Drone Technology in 2023</a></h2> -->
+                                <!-- <div class="post-tags mb-3">
+                                    <span class="badge badge-light"><i class="fa fa-tag mr-1"></i> Technology</span>
+                                    <span class="badge badge-light"><i class="fa fa-tag mr-1"></i> Drones</span>
+                                </div> -->
+								<h4>DroniTech – Drone Service and Solution in Maharashtra</h4>
+                                <p class="text-muted mb-4">
+Have you ever seen a tiny flying robot in the sky? That’s a drone! At Dronitech, we use smart flying machines to help people build things, watch over big areas, check machines from high up, and even make special maps. We are proud to bring our awesome drone service and solution in Maharashtra to cities like Mumbai, Pune, Thane, Nagpur, Nashik, and more.
+
+Our team is full of drone pilots, engineers, and tech experts who know how to use drones for big jobs. Whether it’s for buildings, safety, land checking, or special maps — Dronitech is always ready to fly!</p>
+                                <!-- <a href="single-post.html" class="btn btn-outline-primary btn-sm">Read More <i class="fa fa-arrow-right ml-1"></i></a> -->
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Post - Alternative Layout -->
+                <article class="blog-post card mb-5 border-0 shadow-sm">
+                    <div class="post-thumbnail position-relative">
+                        <img src="img/prod-shop-8.jpg" alt="Blog Post Image" class="img-fluid w-100">
+                      
+                    </div>
+                    <div class="post-content p-4">
+                        
+<h4>How We Help with Drones
+Watching Buildings Being Made (Drone Construction Monitoring)</h4>
+                        <p class="text-muted mb-4">
+Imagine you’re building a big house or a bridge. You can’t see everything from the ground. That’s where drones help! We send our flying camera to take pictures and videos from the sky. This helps workers and builders see every corner of the site. Our drone construction site monitoring in Thane, Mumbai, and other cities helps projects stay on time and safe.
+<br>
+<br>
+<strong>Keeping Places Safe (Drone Surveillance & Security)</strong>
+<br>
+Do you know that drones can help keep people and places safe? Yes! Our drones can watch over crowds, events, and even factory areas. If something looks wrong, our team can quickly respond. We offer drone surveillance and security services in Pune, Thane, and all across Maharashtra.
+<br>
+<br>
+
+<strong>Checking Big Machines (Drone Industrial Inspections)</strong><br>
+Factories and power plants have big machines that are hard to reach. Drones can fly close and take pictures or videos. This way, no one has to climb or go into risky places. Our drone industrial inspections save time and keep people safe.
+<br>
+<br>
+
+<strong>Smart Land Checking (DGPS Surveying & Mapping)</strong><br>
+Land surveying is like drawing a map of the ground. But we use special drones with smart GPS systems to do this faster and better. Our DGPS surveying tools give us exact points on the land. Whether it’s a farm, hill, or city block, we make perfect maps using drones. That’s why people call us the best drone survey company in Maharashtra.
+<br>
+<br>
+<strong>Creating Amazing Maps (Drone Mapping Services)</strong><br>
+
+Drones can fly over big lands and create 2D or 3D maps. These maps are super useful for builders, city planners, and landowners. With our drone mapping services in Mumbai, Pune, and beyond, you get clear maps in less time.
+<br>
+<br>
+Special Drone Work (Custom Drone Services)
+<strong>Special Drone Work (Custom Drone Services)</strong><br>
+Every job is different. Some people need drones for farming, some for movies, and some for rescue work. That’s why we also offer custom drone service in Pune and other cities. Just tell us what you need, and we will plan the best drone job for you.</p>
+						
+					</div>
+                </article>
+
+
+
+                <!-- Blog Post - Minimal Style -->
+                <article class="blog-post mb-5">
+					
+					<div class="post-content">
+						 <h4>Why Choose Dronitech?</h4>
+						<p class="text-muted mb-4">
+Trusted by Experts: Big companies trust us for their big jobs.
+Smart Tools: We use the latest drones and GPS systems for accuracy.
+All Over Maharashtra: Whether you’re in Mumbai, Thane, Pune, or Aurangabad, we’re ready to help.
+Friendly Support: Our team is always happy to answer your questions.
+Fast and Safe: We do our work quickly and without danger.
+</p>
+<br>
+
+	<h4>Where We Work
+</h4>					
+	<p>Dronitech proudly offers drone solutions in:
+Mumbai, Pune, Thane, Navi Mumbai, Nagpur, Nashik, Aurangabad, Kolhapur, Solapur, and more!
+
+</p>		
+<br>
+
+<h4>We are known for:
+</h4>
+<p>
+Aerial land survey drone services
+Helping with drone land surveying and planning
+Smart drones and surveying systems for real projects
+So, whether you’re building a mall, checking a factory, making a map of your farm, or need a drone for a special project — Dronitech is here to help!
+
+Let us bring the sky to your service.
+
+Contact us today and see how drones can make your work faster, easier, and better!</p>
+<br>
+
+<a href="contacts.html" class="btn btn-primary">Contact us<i class="fa fa-arrow-right ml-1"></i></a>
+                    </div>
+                </article>
+
+                <!-- Pagination - Centered with Rounded Style -->
+               
+            </div>
+        </div>
+    </div>
+</section>
+ 
+
+
+ 
+	</main>
+	<!--================== MAIN CONTENT END ==================-->
+
+	<!--======================= FOOTER =======================-->
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-sm-6 col-lg-3 footer-info">
+					<h5>about us</h5>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+				</div>
+				<div class="col-6 col-sm-4 col-lg-2 blok-link">
+					<h5>Shop</h5>
+					<ul>
+						<li><a href="#">DJI</a></li>
+						<li><a href="#">Parrot</a></li>
+						<li><a href="#">Hubsan</a></li>
+						<li><a href="#">Mi</a></li>
+					</ul>
+				</div>
+				<div class="col-6 col-sm-4 col-lg-2 blok-link">
+					<h5>discount</h5>
+					<ul>
+						<li><a href="#">lorem ipsum</a></li>
+						<li><a href="#">dolor sit amet</a></li>
+						<li><a href="#">tempor incididunt</a></li>
+						<li><a href="#">enim ad minim</a></li>
+					</ul>
+				</div>
+				<div class="col-12 col-sm-4 col-lg-2 blok-link">
+					<h5>support</h5>
+					<ul>
+						<li><a href="#">Help</a></li>
+						<li><a href="#">Documentation</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+					</ul>
+				</div>
+				<div class="col-12 col-sm-6 col-lg-3 footer-subscribe">
+					<h5>subscribe</h5>
+					<form action="https://html.rovadex.com/" class="subscribe-form">
+						<input type="email" name="subscribe" placeholder="E-mail">
+						<input type="submit" value="send">
+					</form>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<div class="row align-items-center">
+					<div class="col-12 col-md-3">
+						<a href="index-2.html" class="logo footer-logo"><img src="img/logo.svg" alt="logo"></a>
+					</div>
+					<div class="col-12 col-md-6">
+						<ul class="footer-menu">
+							<li><a href="index-2.html">Home</a></li>
+							<li><a href="about.html">About Us</a></li>
+							<li><a href="services.html">Sevices</a></li>
+							<li><a href="shop.html">Shop</a></li>
+							<li><a href="gallery.html">Gallery</a></li>
+							<li><a href="contacts.html">Contacts</a></li>
+						</ul>
+					</div>
+					<div class="col-12 col-md-3">
+						<ul class="soc-link">
+							<li><a target="_blank" href="https://www.facebook.com/rovadex"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+							<li><a target="_blank" href="https://www.instagram.com/rovadex"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+							<li><a target="_blank" href="https://www.youtube.com/"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+							<li><a target="_blank" href="https://vimeo.com/"><i class="fa fa-vimeo-square" aria-hidden="true"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="copyright">
+				<p><a class="rovadex" href="https://rovadex.com/" target="_blank">Rovadex</a> © 2019. <a href="pravicy-policy.html" target="_blank">All Rights Reserved.</a></p>
+			</div>
+		</div>
+	</footer>
+	<!--===================== FOOTER END =====================-->
+
+	<!--======================= TO TOP =======================-->
+	<a class="to-top" href="#home">
+		<i class="fa fa-chevron-up" aria-hidden="true"></i>
+		<span>
+			<img src="img/icon-tab-1.svg" alt="">
+		</span>
+	</a>
+	<!--===================== TO TOP END =====================-->
+
+	<!-- =============== STYLE =============== -->
+	<link rel="stylesheet" href="css/slick.min.css">
+	<link rel="stylesheet" href="css/bootstrap-grid.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="../../cdn.jsdelivr.net/gh/fancyapps/fancybox%403.5.7/dist/jquery.fancybox.min.css" />
+	<link rel="stylesheet" href="css/style.css">
+
+	<!--=============== TEMPLATE SCRIPT ===============-->
+	<script src="../../code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script src="../../unpkg.com/masonry-layout%404.2.2/dist/masonry.pkgd.min.js"></script>
+	<script src="../../cdn.jsdelivr.net/gh/fancyapps/fancybox%403.5.7/dist/jquery.fancybox.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/rx-lazy.js"></script>
+	<script src="js/scripts.js"></script>
+</body>
+
+<!-- Mirrored from html.rovadex.com/html-quadex/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Jul 2025 16:18:57 GMT -->
+</html>
